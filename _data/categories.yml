@@ -1,8 +1,8 @@
-- slug: design
-  name: Design
+- slug: osint
+  name: osint
 
-- slug: tools
-  name: Tools
+- slug: pentest
+  name: pentest
 
-- slug: productivity
-  name: Productivity
+- slug: tips
+  name: tips
