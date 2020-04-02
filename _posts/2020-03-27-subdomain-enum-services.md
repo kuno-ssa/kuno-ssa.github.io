@@ -45,14 +45,17 @@ categories: [osint]
 
 ### 5. APIのリクエスト方法
 - #### API REQUEST
-    - URL: https://www.virustotal.com/api/v3/domains/<#domain>>/subdomains?limit=40  
+    - URL: https://www.virustotal.com/api/v3/domains/<#domain>/subdomains?limit=40  
         ※limitは結果の表示数。デフォルトは10で最大40。
     - Method: GET
     - HEADER: x-apikey:<#api-key>
 
-- #### API RESPONSE
+- #### API SAMPLE
 {% highlight json %}
-# Example Response
+# Sample Request
+https://www.virustotal.com/api/v3/domains/joshisec.com/subdomains?limit=40
+
+# Sample Response
 {
     "data": [
         {
@@ -108,9 +111,12 @@ categories: [osint]
     - URL: https://api.hackertarget.com/hostsearch/?q=<#domain>
     - Method: GET
 
-- #### API RESPONSE
+- #### API SAMPLE
 {% highlight json %}
-# Example Response
+# Sample Request
+https://api.hackertarget.com/hostsearch/?q=joshisec.com
+
+# Sample Response
 joshisec.com,157.7.107.46
 www.joshisec.com,157.7.107.46
 {% endhighlight %}
@@ -119,9 +125,8 @@ www.joshisec.com,157.7.107.46
     - [https://hackertarget.com/find-dns-host-records/](https://hackertarget.com/find-dns-host-records/)
 
 ### 6.コメント  
-- ◎ サブドメインに対応するIPアドレスを取得できるため、次ステップの調査工数が減る。
 - ◎ 結果がシンプルなので、スクリプト作成が容易。
-- ◎ 列挙するサブドメイン数は、他の3サービスと比べてやや少ない印象。
+- △ 列挙するサブドメイン数は、他の3サービスと比べてやや少ない印象。
 - △ 列挙可能なサブドメインの数が最大500件であるため、大量のサブドメインを保持しているドメインの調査には向いていない。(apple.comなど)
 
 ***
@@ -152,9 +157,12 @@ www.joshisec.com,157.7.107.46
     - Method: GET
     - HEADER: apikey:<#api-key>
 
-- #### API RESPONSE
+- #### API SAMPLE
 {% highlight json %}
-# Example Response
+# Sample Request
+https://api.securitytrails.com/v1/domain/joshisec.com/subdomains
+
+# Sample Response
 {
   "subdomains": [
     "www"
@@ -197,9 +205,12 @@ www.joshisec.com,157.7.107.46
     - Method: GET
     - HEADER: Authorization:Basic <#auth-key>
 
-- #### API RESPONSE
+- #### API SAMPLE
 {% highlight json %}
-# Example Response
+# Sample Request
+https://api.passivetotal.org/v2/enrichment/subdomains?query=joshisec.com
+
+# Sample Response
 {
     "primaryDomain": "joshisec.com",
     "success": true,
