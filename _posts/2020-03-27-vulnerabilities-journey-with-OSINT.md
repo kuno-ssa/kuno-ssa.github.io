@@ -13,6 +13,6 @@ categories: [osint]
 以下の調査手順に従って、全5ポストで紹介する予定です。
 
 ### 1. [subdomain enum services](https://kuno-ssa.github.io/osint/2020/03/27/subdomain-enum-services.html)
-### 2. ip address resolution services
+### 2. [domain record lookup services](https://kuno-ssa.github.io/osint/2020/04/02/domain-record-lookup-services.html)
 ### 3. find open port, banner, and vulnerability
 ### 4. search exploit code
