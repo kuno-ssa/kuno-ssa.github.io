@@ -4,5 +4,8 @@
 - slug: pentest
   name: pentest
 
+- slug: vulnerability
+  name: vulnerability
+
 - slug: tips
   name: tips
